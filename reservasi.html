@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi Nasi Padang</title>
+    <link rel="stylesheet" href="reservasi-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reservasi Nasi Padang</h1>
+        <img src="images/nasi-padang.jpg" alt="Nasi Padang" class="main-image">
+        <p>Selamat datang <br> Silakan isi formulir di bawah ini untuk memesan.</p>
+        <form id="reservasiForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="phone">Nomor Telepon:</label>
+            <input type="text" id="phone" name="phone" required><br><br>
+
+            <label for="portions">Jumlah Porsi:</label>
+            <input type="number" id="portions" name="portions" required min="1"><br><br>
+
+            <label for="date">Tanggal Reservasi:</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="time">Jam Reservasi:</label>
+            <input type="time" id="time" name="time" required><br><br>
+
+            <label>Lauk Pilihan:</label><br>
+            <label><input type="checkbox" name="lauk" value="Rendang"> Rendang</label><br>
+            <label><input type="checkbox" name="lauk" value="Ayam Pop"> Ayam Pop</label><br>
+            <label><input type="checkbox" name="lauk" value="Gulai Ikan"> Gulai Ikan</label><br><br>
+
+            <button type="submit">Kirim</button>
+        </form>
+
+        <button id="kembaliButton" style="display: none;" onclick="resetForm()">Kembali</button>
+
+        <div id="result" style="margin-top: 20px; display: none;">
+            <h2>Hasil Reservasi Anda</h2>
+            <p><strong>Nama:</strong> <span id="resultName"></span></p>
+            <p><strong>Nomor Telepon:</strong> <span id="resultPhone"></span></p>
+            <p><strong>Jumlah Porsi:</strong> <span id="resultPortions"></span></p>
+            <p><strong>Tanggal Reservasi:</strong> <span id="resultDate"></span></p>
+            <p><strong>Jam Reservasi:</strong> <span id="resultTime"></span></p>
+            <p><strong>Lauk Pilihan:</strong> <span id="resultLauk"></span></p>
+        </div>
+    </div>
+    <script src="reservasi-script.js"></script>
+</body>
+</html>
